@@ -32,7 +32,6 @@
       const idElement = document.getElementById('id');
       idElement.value = Math.random().toString(36).substr(2, 9);
 
-      // document.getElementById('submit').addEventListener('click', (e) => e.preventDefault());
       document.getElementById('form').addEventListener('submit', (e) => {
         e.preventDefault();
         const username = document.getElementById('username');

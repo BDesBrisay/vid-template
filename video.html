@@ -5,8 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     <title>js-web-project</title>
-    <link rel="stylesheet" href="index.css"></head>
+    <link rel="stylesheet" href="video.css"></head>
   <body>
-    <h1 class="logo">video!</h1>
+    <div class="controls">
+      <button 
+        id="muteButton"
+        class="control"
+      >
+        mute
+      </button>
+      <div class="controlDropdown">
+        <button class="controlIcon">
+          &#9776;
+        </button>
+        <ul class="controlMenu">
+          <li class="controlOption"></li>
+          <li class="controlOption"></li>
+        </ul>
+      </div>
+      <button 
+        id="videoButton"
+        class="control"  
+      >
+        cut video
+      </button>
+    </div>
+    <div class="contentContainer">
+      <div id="streamContainer"></div>
+      <div id="chatContainer"></div>
+    </div>
   </body>
 </html>

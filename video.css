@@ -1,0 +1,20 @@
+.contentContainer {
+
+}
+.streamContainer {
+
+}
+.chatContainer {
+
+}
+
+.controls {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background: #666;
+}
+.control {
+  flex: 1;
+}
+
