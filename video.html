@@ -7,6 +7,29 @@
     <title>js-web-project</title>
     <link rel="stylesheet" href="video.css"></head>
   <body>
+    <div class="contentContainer">
+      <div class="mainVideo"></div>
+      <div class="videoList">
+        <button 
+          id="inviteButton"
+          class="inviteButton smallVideo"  
+          value="off"
+        >
+          <img 
+            src="images/invite.png" 
+            alt="" 
+            class="controlIcon" 
+          />
+          <span>Invite</span>
+        </button>
+        <div class="smallVideo"></div>
+        <div class="smallVideo"></div>
+        <div class="smallVideo"></div>
+        <div class="smallVideo"></div>
+        <div class="smallVideo"></div>
+        <div class="smallVideo"></div>
+      </div>
+    </div>
     <div class="controls">
       <button 
         id="leaveButton"
@@ -39,7 +62,7 @@
         <span>Stop Video</span>
       </button>
       <button 
-        id="videoButton"
+        id="peopleButton"
         class="control"  
         value="on"
       >
@@ -48,19 +71,7 @@
           alt="" 
           class="controlIcon" 
         />
-        <span>6 Particiants</span>
-      </button>
-      <button 
-        id="videoButton"
-        class="control"  
-        value="on"
-      >
-        <img 
-          src="images/invite.png" 
-          alt="" 
-          class="controlIcon" 
-        />
-        <span>Invite</span>
+        <span>6 People</span>
       </button>
       <!--div class="controlDropdown">
         <button class="controlDropIcon">
@@ -73,10 +84,6 @@
           <li class="controlOption">Built-in Speaker</li>
         </ul>
       </div-->
-    </div>
-    <div class="contentContainer">
-      <div id="streamContainer"></div>
-      <div id="chatContainer"></div>
     </div>
     <script>
       // leave meeting
