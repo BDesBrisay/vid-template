@@ -22,12 +22,18 @@ body {
   width: 100vw;
   height: calc(100vh - 180px);
   background: var(--white3);
-  border: 1px solid var(--white4);
   box-sizing: border-box;
+}
+.mainVideo video,
+.smallVideo video {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  background: black;
 }
 .videoList {
   display: flex;
-  justify-content: center safe;
   width: 100vw;
   height: 120px;
   overflow-x: auto;
@@ -43,8 +49,10 @@ body {
   background: var(--white3);
   margin-right: 10px;
   margin-left: auto;
-  border: 1px solid var(--white4);
   box-sizing: border-box;
+}
+.smallVideo video {
+  object-fit: cover;
 }
 .smallVideo {
   margin-left: auto;
@@ -53,6 +61,7 @@ body {
   margin-right: auto;
 }
 .inviteButton {
+  border: 1px solid var(--white4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,9 +95,12 @@ body {
   font-weight: bold;
   outline: none;
   font-size: 12px;
+  text-decoration: none;
 }
 .control:active,
-.control:focus {
+.control:focus,
+.inviteButton:active,
+.inviteButton:focus {
   z-index: 1;
   outline: 2px solid var(--mainhalf);
 }
@@ -97,6 +109,7 @@ body {
 }
 #leaveButton {
   color: var(--second);
+  font-size: 14px;
 }
 .controlIcon {
   height: 24px;

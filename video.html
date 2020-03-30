@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="video.css"></head>
   <body>
     <div class="contentContainer">
-      <div class="mainVideo"></div>
+      <div class="mainVideo">
+        <video autoplay controls loop>
+          <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
       <div class="videoList">
         <button 
           id="inviteButton"
@@ -24,19 +29,16 @@
         </button>
         <div class="smallVideo"></div>
         <div class="smallVideo"></div>
-        <div class="smallVideo"></div>
-        <div class="smallVideo"></div>
-        <div class="smallVideo"></div>
-        <div class="smallVideo"></div>
       </div>
     </div>
     <div class="controls">
-      <button 
+      <a 
         id="leaveButton"
         class="control"  
+        href="index.html"
       >
         <span>Leave Meeting</span>
-      </button>
+      </a>
       <button 
         id="muteButton"
         class="control"
@@ -73,7 +75,9 @@
         />
         <span>6 People</span>
       </button>
-      <!--div class="controlDropdown">
+      <!-- CONTROL DROPDOWN 
+        
+        div class="controlDropdown">
         <button class="controlDropIcon">
           &#9776;
         </button>
@@ -86,11 +90,7 @@
       </div-->
     </div>
     <script>
-      // leave meeting
-      document.getElementById('leaveButton').addEventListener('click', () => {
-        window.lo
-      })
-
+      // toggle mute button
       const muteButton = document.getElementById('muteButton')
       muteButton.addEventListener('click', () => {
         if (muteButton.value === 'on') {
@@ -109,6 +109,7 @@
         }
       })
       
+      // toggle video button
       const videoButton = document.getElementById('videoButton')
       videoButton.addEventListener('click', () => {
         if (videoButton.value === 'on') {
