@@ -1,5 +1,20 @@
-.contentContainer {
+:root {
+  --main: cornflowerblue;
+  --second: #d56;
+  --mainhalf: #69da;
+  --white2: #f2f4f6;
+  --white1: #f6f8fa;
+  --white: #fff;
+}
 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--white2);
+}
+.contentContainer {
+  width: 100%;
+  height: calc(100vh - 60px);
 }
 .streamContainer {
 
@@ -12,9 +27,86 @@
   display: flex;
   height: 60px;
   width: 100%;
-  background: #666;
 }
 .control {
   flex: 1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: none;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+}
+.control:hover {
+  background: var(--white2);
+}
+#leaveButton {
+  color: var(--second);
+}
+.controlIcon {
+  height: 24px;
+  width: 24px;
+  margin-bottom: 4px;
+}
+
+
+.controlDropdown {
+  position: relative;
+  height: 60px;
+  width: 60px;
+}
+.controlMenu {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s;
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 200px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 2px 8px #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+}
+.controlDropdown:hover .controlMenu {
+  visibility: visible;
+  opacity: 1;
+}
+.controlDropIcon {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.controlOptionHeader,
+.controlOption {
+  width: 100%;
+  text-align: left;
+  padding: 4px 0;
+  box-sizing: border-box;
+}
+.controlOptionHeader {
+  font-weight: bold;
+}
+.controlOption {
+  cursor: pointer;
+  padding-left: 12px;
+}
+.controlOption:hover {
+  background: #ddd;
 }
 

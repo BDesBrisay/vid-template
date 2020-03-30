@@ -9,30 +9,116 @@
   <body>
     <div class="controls">
       <button 
+        id="leaveButton"
+        class="control"  
+      >
+        <span>Leave Meeting</span>
+      </button>
+      <button 
         id="muteButton"
         class="control"
+        value="on"
       >
-        mute
+        <img 
+          src="images/mic.png" 
+          alt="" 
+          class="controlIcon"
+        />
+        <span>Mute</span>
       </button>
-      <div class="controlDropdown">
-        <button class="controlIcon">
-          &#9776;
-        </button>
-        <ul class="controlMenu">
-          <li class="controlOption"></li>
-          <li class="controlOption"></li>
-        </ul>
-      </div>
       <button 
         id="videoButton"
         class="control"  
+        value="on"
       >
-        cut video
+        <img 
+          src="images/video.png" 
+          alt="" 
+          class="controlIcon" 
+        />
+        <span>Stop Video</span>
       </button>
+      <button 
+        id="videoButton"
+        class="control"  
+        value="on"
+      >
+        <img 
+          src="images/group.png" 
+          alt="" 
+          class="controlIcon" 
+        />
+        <span>6 Particiants</span>
+      </button>
+      <button 
+        id="videoButton"
+        class="control"  
+        value="on"
+      >
+        <img 
+          src="images/invite.png" 
+          alt="" 
+          class="controlIcon" 
+        />
+        <span>Invite</span>
+      </button>
+      <!--div class="controlDropdown">
+        <button class="controlDropIcon">
+          &#9776;
+        </button>
+        <ul class="controlMenu">
+          <li class="controlOptionHeader">Select Microphone</li>
+          <li class="controlOption">Built-in Microphone</li>
+          <li class="controlOptionHeader">Select Speaker</li>
+          <li class="controlOption">Built-in Speaker</li>
+        </ul>
+      </div-->
     </div>
     <div class="contentContainer">
       <div id="streamContainer"></div>
       <div id="chatContainer"></div>
     </div>
+    <script>
+      // leave meeting
+      document.getElementById('leaveButton').addEventListener('click', () => {
+        window.lo
+      })
+
+      const muteButton = document.getElementById('muteButton')
+      muteButton.addEventListener('click', () => {
+        if (muteButton.value === 'on') {
+          muteButton.value = 'off';
+          muteButton.innerHTML = `
+            <img src="images/mutemic.png" alt="" class="controlIcon" />
+            <span style="color:var(--second)">Unmute</span>
+          `;
+        }
+        else {
+          muteButton.value = 'on';
+          muteButton.innerHTML = `
+            <img src="images/mic.png" alt="" class="controlIcon" />
+            <span>Mute</span>
+          `;
+        }
+      })
+      
+      const videoButton = document.getElementById('videoButton')
+      videoButton.addEventListener('click', () => {
+        if (videoButton.value === 'on') {
+          videoButton.value = 'off';
+          videoButton.innerHTML = `
+            <img src="images/stopvideo.png" alt="" class="controlIcon" />
+            <span style="color:var(--second)">Start Video</span>
+          `;
+        }
+        else {
+          videoButton.value = 'on';
+          videoButton.innerHTML = `
+            <img src="images/video.png" alt="" class="controlIcon" />
+            <span>Stop Video</span>
+          `;
+        }
+      })
+    </script>
   </body>
 </html>
