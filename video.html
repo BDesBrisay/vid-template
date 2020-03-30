@@ -4,23 +4,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
-    <title>js-web-project</title>
-    <link rel="stylesheet" href="video.css"></head>
+    <title>Appearix - Group Video</title>
+    <link rel="stylesheet" href="video.css">
+  </head>
   <body>
     <div class="contentContainer">
-      <div class="mainVideo">
-        <video autoplay controls loop>
-          <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <div id="clientsContainer">
+        <div class="mainVideo">
+          <video autoplay controls loop>
+            <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="videoList">
+          <button id="inviteButton" class="inviteButton smallVideo" value="off">
+            <img src="images/invite.png" alt="" class="controlIcon" />
+            <span>Invite</span>
+          </button>
+          <div class="smallVideo">
+            <video autoplay loop>
+              <source src="https://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="smallVideo"></div>
+        </div>
       </div>
-      <div class="videoList">
-        <button id="inviteButton" class="inviteButton smallVideo" value="off">
-          <img src="images/invite.png" alt="" class="controlIcon" />
-          <span>Invite</span>
-        </button>
-        <div class="smallVideo"></div>
-        <div class="smallVideo"></div>
+      <div id="sideMenu" class="sideMenu" style="width: 0;">
+        <h1>Hi I'm Menu</h1>
       </div>
     </div>
     <div class="controls">
@@ -52,44 +63,7 @@
         </ul>
       </div-->
     </div>
-    <script>
-      // toggle mute button
-      const muteButton = document.getElementById('muteButton')
-      muteButton.addEventListener('click', () => {
-        if (muteButton.value === 'on') {
-          muteButton.value = 'off';
-          muteButton.innerHTML = `
-            <img src="images/mutemic.png" alt="" class="controlIcon" />
-            <span style="color:var(--second)">Unmute</span>
-          `;
-        }
-        else {
-          muteButton.value = 'on';
-          muteButton.innerHTML = `
-            <img src="images/mic.png" alt="" class="controlIcon" />
-            <span>Mute</span>
-          `;
-        }
-      })
-      
-      // toggle video button
-      const videoButton = document.getElementById('videoButton')
-      videoButton.addEventListener('click', () => {
-        if (videoButton.value === 'on') {
-          videoButton.value = 'off';
-          videoButton.innerHTML = `
-            <img src="images/stopvideo.png" alt="" class="controlIcon" />
-            <span style="color:var(--second)">Start Video</span>
-          `;
-        }
-        else {
-          videoButton.value = 'on';
-          videoButton.innerHTML = `
-            <img src="images/video.png" alt="" class="controlIcon" />
-            <span>Stop Video</span>
-          `;
-        }
-      })
-    </script>
+    <script type="text/javascript" src="utils/copyToClipboard.js"></script>
+    <script type="text/javascript" src="video.js"></script>
   </body>
 </html>
